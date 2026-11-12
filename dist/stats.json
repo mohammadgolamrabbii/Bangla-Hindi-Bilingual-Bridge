@@ -1,11 +1,11 @@
 {
   "title": "Bangla <-> Hindi <-> English Bilingual Bridge",
-  "rich_bilingual_pairs": 20243,
-  "both_rich_verified": 9637,
-  "with_english_meanings": 9585,
-  "with_hindi_definitions": 20243,
-  "total_parallel_cognates": 41904,
+  "rich_bilingual_pairs": 22583,
+  "both_rich_verified": 16664,
+  "with_english_meanings": 9621,
+  "with_hindi_definitions": 22583,
+  "total_parallel_cognates": 48250,
   "chunk_files": 43,
   "license": "GPL-3.0",
-  "generated_at": "2026-11-12T07:06:20.290Z"
+  "generated_at": "2026-11-12T08:46:16.897Z"
 }
