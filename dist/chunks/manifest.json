@@ -1,0 +1,260 @@
+[
+  {
+    "char": "অ",
+    "code": "985",
+    "file": "bridge_985.json",
+    "count": 2707
+  },
+  {
+    "char": "আ",
+    "code": "986",
+    "file": "bridge_986.json",
+    "count": 857
+  },
+  {
+    "char": "ই",
+    "code": "987",
+    "file": "bridge_987.json",
+    "count": 238
+  },
+  {
+    "char": "ঈ",
+    "code": "988",
+    "file": "bridge_988.json",
+    "count": 44
+  },
+  {
+    "char": "উ",
+    "code": "989",
+    "file": "bridge_989.json",
+    "count": 484
+  },
+  {
+    "char": "ঊ",
+    "code": "98a",
+    "file": "bridge_98a.json",
+    "count": 16
+  },
+  {
+    "char": "ঋ",
+    "code": "98b",
+    "file": "bridge_98b.json",
+    "count": 25
+  },
+  {
+    "char": "এ",
+    "code": "98f",
+    "file": "bridge_98f.json",
+    "count": 130
+  },
+  {
+    "char": "ঐ",
+    "code": "990",
+    "file": "bridge_990.json",
+    "count": 16
+  },
+  {
+    "char": "ও",
+    "code": "993",
+    "file": "bridge_993.json",
+    "count": 22
+  },
+  {
+    "char": "ঔ",
+    "code": "994",
+    "file": "bridge_994.json",
+    "count": 19
+  },
+  {
+    "char": "ক",
+    "code": "995",
+    "file": "bridge_995.json",
+    "count": 1331
+  },
+  {
+    "char": "খ",
+    "code": "996",
+    "file": "bridge_996.json",
+    "count": 207
+  },
+  {
+    "char": "গ",
+    "code": "997",
+    "file": "bridge_997.json",
+    "count": 574
+  },
+  {
+    "char": "ঘ",
+    "code": "998",
+    "file": "bridge_998.json",
+    "count": 89
+  },
+  {
+    "char": "ঙ",
+    "code": "999",
+    "file": "bridge_999.json",
+    "count": 1
+  },
+  {
+    "char": "চ",
+    "code": "99a",
+    "file": "bridge_99a.json",
+    "count": 480
+  },
+  {
+    "char": "ছ",
+    "code": "99b",
+    "file": "bridge_99b.json",
+    "count": 94
+  },
+  {
+    "char": "জ",
+    "code": "99c",
+    "file": "bridge_99c.json",
+    "count": 510
+  },
+  {
+    "char": "ঝ",
+    "code": "99d",
+    "file": "bridge_99d.json",
+    "count": 45
+  },
+  {
+    "char": "ঞ",
+    "code": "99e",
+    "file": "bridge_99e.json",
+    "count": 1
+  },
+  {
+    "char": "ট",
+    "code": "99f",
+    "file": "bridge_99f.json",
+    "count": 112
+  },
+  {
+    "char": "ঠ",
+    "code": "9a0",
+    "file": "bridge_9a0.json",
+    "count": 19
+  },
+  {
+    "char": "ড",
+    "code": "9a1",
+    "file": "bridge_9a1.json",
+    "count": 110
+  },
+  {
+    "char": "ঢ",
+    "code": "9a2",
+    "file": "bridge_9a2.json",
+    "count": 22
+  },
+  {
+    "char": "ণ",
+    "code": "9a3",
+    "file": "bridge_9a3.json",
+    "count": 1
+  },
+  {
+    "char": "ত",
+    "code": "9a4",
+    "file": "bridge_9a4.json",
+    "count": 562
+  },
+  {
+    "char": "থ",
+    "code": "9a5",
+    "file": "bridge_9a5.json",
+    "count": 25
+  },
+  {
+    "char": "দ",
+    "code": "9a6",
+    "file": "bridge_9a6.json",
+    "count": 755
+  },
+  {
+    "char": "ধ",
+    "code": "9a7",
+    "file": "bridge_9a7.json",
+    "count": 268
+  },
+  {
+    "char": "ন",
+    "code": "9a8",
+    "file": "bridge_9a8.json",
+    "count": 951
+  },
+  {
+    "char": "প",
+    "code": "9aa",
+    "file": "bridge_9aa.json",
+    "count": 1783
+  },
+  {
+    "char": "ফ",
+    "code": "9ab",
+    "file": "bridge_9ab.json",
+    "count": 168
+  },
+  {
+    "char": "ব",
+    "code": "9ac",
+    "file": "bridge_9ac.json",
+    "count": 1963
+  },
+  {
+    "char": "ভ",
+    "code": "9ad",
+    "file": "bridge_9ad.json",
+    "count": 349
+  },
+  {
+    "char": "ম",
+    "code": "9ae",
+    "file": "bridge_9ae.json",
+    "count": 1188
+  },
+  {
+    "char": "য",
+    "code": "9af",
+    "file": "bridge_9af.json",
+    "count": 202
+  },
+  {
+    "char": "র",
+    "code": "9b0",
+    "file": "bridge_9b0.json",
+    "count": 603
+  },
+  {
+    "char": "ল",
+    "code": "9b2",
+    "file": "bridge_9b2.json",
+    "count": 330
+  },
+  {
+    "char": "শ",
+    "code": "9b6",
+    "file": "bridge_9b6.json",
+    "count": 731
+  },
+  {
+    "char": "ষ",
+    "code": "9b7",
+    "file": "bridge_9b7.json",
+    "count": 12
+  },
+  {
+    "char": "স",
+    "code": "9b8",
+    "file": "bridge_9b8.json",
+    "count": 1858
+  },
+  {
+    "char": "হ",
+    "code": "9b9",
+    "file": "bridge_9b9.json",
+    "count": 341
+  }
+]

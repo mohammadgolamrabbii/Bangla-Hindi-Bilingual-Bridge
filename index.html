@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bangla ↔ Hindi ↔ English Bilingual Bridge — 41,904+ Parallel Cognates</title>
+  <meta name="description" content="Open-source trilingual Bangla-Hindi-English parallel lexicon bridge: 20,243 rich dictionary pairs and 41,904 verified Sanskrit/Tatsama & Perso-Arabic cognates." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@600;800&family=Inter:wght@400;600;700;800&family=Noto+Sans+Bengali:wght@400;600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Inter', 'Noto Sans Bengali', 'Noto Sans Devanagari', sans-serif; }
+    .bn-font { font-family: 'Baloo Da 2', 'Noto Sans Bengali', sans-serif; }
+    .hi-font { font-family: 'Noto Sans Devanagari', sans-serif; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col">
+
+  <header class="border-b border-slate-800 bg-slate-950/95 sticky top-0 z-30 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <span class="text-3xl">🌉</span>
+        <div>
+          <h1 class="text-xl sm:text-2xl font-black text-white tracking-tight flex items-center gap-2 flex-wrap">
+            Bangla ↔ Hindi ↔ English Bridge
+            <span class="text-[10px] uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 font-bold">41,904 Cognates</span>
+          </h1>
+          <p class="text-xs text-slate-400">Cross-Lingual Indic Lexicon Bridge • Curated by Mohammad Golamrabbii</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 text-xs font-semibold flex-wrap">
+        <a href="https://github.com/mohammadgolamrabbii/Bangla-Hindi-Bilingual-Bridge" target="_blank" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 transition">🐙 GitHub Repo</a>
+        <a href="https://mohammadgolamrabbii.github.io/Bangla-Lexicon-Mega-Archive/" target="_blank" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold transition">🇧🇩 Bangla (495k)</a>
+        <a href="https://mohammadgolamrabbii.github.io/Hindi-Lexicon-Mega-Archive/" target="_blank" class="px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold transition">🇮🇳 Hindi (411k)</a>
+        <a href="https://mohammadgolamrabbii.github.io/typography/" target="_blank" class="px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-bold transition">🔤 Fonts Hub</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 flex-1">
+    <!-- Stats & Search -->
+    <div class="bg-gradient-to-br from-slate-900 via-indigo-950/30 to-slate-900 border border-slate-800 rounded-2xl p-5 sm:p-7 mb-6 shadow-2xl">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5 text-center">
+        <div class="bg-slate-950/60 border border-slate-800/80 rounded-xl p-3">
+          <div class="text-xl sm:text-2xl font-black text-indigo-400" id="statPairs">20,243</div>
+          <div class="text-[11px] text-slate-400">Rich Trilingual Pairs</div>
+        </div>
+        <div class="bg-slate-950/60 border border-slate-800/80 rounded-xl p-3">
+          <div class="text-xl sm:text-2xl font-black text-cyan-400" id="statCog">41,904</div>
+          <div class="text-[11px] text-slate-400">Total Parallel Cognates</div>
+        </div>
+        <div class="bg-slate-950/60 border border-slate-800/80 rounded-xl p-3">
+          <div class="text-xl sm:text-2xl font-black text-emerald-400" id="statBoth">9,637</div>
+          <div class="text-[11px] text-slate-400">Both-Side Rich Verified</div>
+        </div>
+        <div class="bg-slate-950/60 border border-slate-800/80 rounded-xl p-3">
+          <div class="text-xl sm:text-2xl font-black text-amber-400" id="statEn">9,585</div>
+          <div class="text-[11px] text-slate-400">With English Meanings</div>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-3">
+        <div class="relative flex-1">
+          <span class="absolute left-3.5 top-3.5 text-slate-400">🔍</span>
+          <input id="searchInput" type="text" placeholder="Search in বাংলা, हिन्दी, or English (e.g., অক্ষ, अक्ष, mathematics, অরণ্য)..."
+            class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-950 border border-slate-700 focus:border-indigo-500 focus:outline-none text-sm text-white placeholder-slate-500" />
+        </div>
+        <select id="tierFilter" class="px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-sm text-slate-200 focus:border-indigo-500 focus:outline-none">
+          <option value="all">All Pairs (20,243)</option>
+          <option value="rich-both">Trilingual Enriched (BN + HI + EN)</option>
+          <option value="rich-wordnet">WordNet Verified (BN + HI)</option>
+        </select>
+        <button id="loadAllBtn" onclick="loadAllChunks()" class="px-4 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs sm:text-sm font-bold transition whitespace-nowrap">
+          ⚡ Search All 20,243 Pairs
+        </button>
+      </div>
+
+      <div class="mt-4 pt-4 border-t border-slate-800/80">
+        <div class="text-[11px] uppercase tracking-wider text-slate-400 font-bold mb-2">Browse Cognate Clusters by Bangla Initial:</div>
+        <div id="alphabetRibbon" class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1"></div>
+      </div>
+    </div>
+
+    <!-- Download & Status Strip -->
+    <div class="flex items-center justify-between text-xs text-slate-400 mb-4 px-1 flex-wrap gap-2">
+      <span id="statusText">Loading cognate index...</span>
+      <div class="flex items-center gap-3">
+        <a href="dist/bangla_hindi_bridge_rich.jsonl" download class="text-indigo-400 hover:underline font-semibold">⬇ JSONL (12.7 MB)</a>
+        <a href="dist/bangla_hindi_bridge_core.csv" download class="text-emerald-400 hover:underline font-semibold">⬇ CSV (6.7 MB)</a>
+        <a href="dist/bangla_hindi_cognate_pairs.tsv" download class="text-amber-400 hover:underline font-semibold">⬇ 41,904 Cognates (.tsv)</a>
+      </div>
+    </div>
+
+    <div id="resultsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-5"></div>
+
+    <div id="loadMoreWrap" class="text-center mt-8 hidden">
+      <button onclick="showMore()" class="px-6 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-sm font-bold text-white transition">
+        Load More Parallel Pairs ↓
+      </button>
+    </div>
+  </main>
+
+  <footer class="border-t border-slate-800 bg-slate-950 py-6 text-center text-xs text-slate-500 mt-10">
+    <p>Open Lexicon Foundation • Curated by <a href="https://github.com/mohammadgolamrabbii" target="_blank" class="text-indigo-400 hover:underline">Mohammad Golamrabbii</a> • GNU GPL-3.0</p>
+  </footer>
+
+  <script>
+    let manifest = [];
+    const chunkCache = new Map();
+    let activeItems = [];
+    let filteredItems = [];
+    let displayLimit = 40;
+    let allLoaded = false;
+
+    async function init() {
+      try {
+        const [statsRes, manRes] = await Promise.all([
+          fetch('dist/stats.json'),
+          fetch('dist/chunks/manifest.json')
+        ]);
+        const stats = await statsRes.json();
+        manifest = await manRes.json();
+
+        document.getElementById('statPairs').textContent = stats.rich_bilingual_pairs.toLocaleString();
+        document.getElementById('statCog').textContent = stats.total_parallel_cognates.toLocaleString();
+        document.getElementById('statBoth').textContent = stats.both_rich_verified.toLocaleString();
+        document.getElementById('statEn').textContent = stats.with_english_meanings.toLocaleString();
+
+        renderAlphabetRibbon();
+        const defaultChunk = manifest.find(m => m.char === 'অ') || manifest[0];
+        if (defaultChunk) await selectChunk(defaultChunk.code);
+      } catch (err) {
+        document.getElementById('statusText').textContent = '⚠️ Error loading index: ' + err.message;
+      }
+    }
+
+    function renderAlphabetRibbon() {
+      const ribbon = document.getElementById('alphabetRibbon');
+      ribbon.innerHTML = manifest.map(m => `
+        <button data-code="${m.code}" onclick="selectChunk('${m.code}')"
+          class="alpha-btn bn-font shrink-0 px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-sm font-bold text-slate-200 transition">
+          ${m.char} <span class="text-[10px] text-slate-500 font-normal">${m.count}</span>
+        </button>
+      `).join('');
+    }
+
+    async function fetchChunk(code) {
+      if (chunkCache.has(code)) return chunkCache.get(code);
+      const entry = manifest.find(m => m.code === code);
+      if (!entry) return [];
+      const res = await fetch(`dist/chunks/${entry.file}`);
+      const data = await res.json();
+      chunkCache.set(code, data);
+      return data;
+    }
+
+    async function selectChunk(code) {
+      document.querySelectorAll('.alpha-btn').forEach(b => {
+        b.classList.remove('bg-indigo-600', 'text-white', 'border-indigo-500');
+        if (b.dataset.code === code) b.classList.add('bg-indigo-600', 'text-white', 'border-indigo-500');
+      });
+      document.getElementById('statusText').textContent = 'Loading parallel pairs...';
+      activeItems = await fetchChunk(code);
+      displayLimit = 40;
+      applyFilters();
+    }
+
+    async function loadAllChunks() {
+      if (allLoaded) return;
+      const btn = document.getElementById('loadAllBtn');
+      btn.disabled = true;
+      btn.textContent = '⏳ Indexing 20,243 pairs...';
+      const all = [];
+      for (const m of manifest) {
+        const items = await fetchChunk(m.code);
+        for (const item of items) all.push(item);
+      }
+      activeItems = all;
+      allLoaded = true;
+      btn.textContent = '✅ All 20,243 Pairs Indexed';
+      btn.classList.replace('bg-indigo-600', 'bg-emerald-700');
+      applyFilters();
+    }
+
+    function applyFilters() {
+      const q = document.getElementById('searchInput').value.trim().toLowerCase();
+      const tier = document.getElementById('tierFilter').value;
+
+      filteredItems = activeItems.filter(item => {
+        if (tier !== 'all' && item.match_tier !== tier) return false;
+        if (!q) return true;
+        if (item.bn.toLowerCase().includes(q) || item.hi.toLowerCase().includes(q)) return true;
+        if (item.en.some(e => e.toLowerCase().includes(q))) return true;
+        if (item.romanised.some(r => r.toLowerCase().includes(q))) return true;
+        if (item.hi_def.some(d => d.toLowerCase().includes(q))) return true;
+        if (item.bn_synonyms.some(s => s.toLowerCase().includes(q))) return true;
+        if (item.hi_synonyms.some(s => s.toLowerCase().includes(q))) return true;
+        return false;
+      });
+      renderResults();
+    }
+
+    function renderResults() {
+      const grid = document.getElementById('resultsGrid');
+      const slice = filteredItems.slice(0, displayLimit);
+      document.getElementById('statusText').textContent = `Showing ${slice.length.toLocaleString()} of ${filteredItems.length.toLocaleString()} parallel cognate pairs`;
+
+      grid.innerHTML = slice.map(item => `
+        <div class="bg-slate-900/90 border border-slate-800 hover:border-indigo-500/40 rounded-2xl p-5 flex flex-col justify-between transition shadow-lg">
+          <div>
+            <!-- Dual Language Header -->
+            <div class="grid grid-cols-2 gap-3 pb-3 mb-3 border-b border-slate-800">
+              <div class="bg-emerald-950/30 border border-emerald-500/20 rounded-xl p-3">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-[10px] font-bold text-emerald-400 uppercase">🇧🇩 Bangla</span>
+                  <button onclick="speak('${escapeAttr(item.bn)}', 'bn-BD')" class="text-xs px-1.5 py-0.5 rounded bg-slate-800 hover:bg-slate-700">🔊</button>
+                </div>
+                <div class="bn-font text-2xl font-extrabold text-white">${escapeHtml(item.bn)}</div>
+                ${item.romanised.length ? `<div class="text-[11px] text-emerald-300 font-mono">/${escapeHtml(item.romanised[0])}/</div>` : ''}
+              </div>
+              <div class="bg-amber-950/30 border border-amber-500/20 rounded-xl p-3">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-[10px] font-bold text-amber-400 uppercase">🇮🇳 Hindi</span>
+                  <button onclick="speak('${escapeAttr(item.hi)}', 'hi-IN')" class="text-xs px-1.5 py-0.5 rounded bg-slate-800 hover:bg-slate-700">🔊</button>
+                </div>
+                <div class="hi-font text-2xl font-extrabold text-white">${escapeHtml(item.hi)}</div>
+                <div class="text-[10px] text-amber-300/80 uppercase font-semibold mt-0.5">${escapeHtml(item.pos.join(', ') || 'cognate')}</div>
+              </div>
+            </div>
+
+            ${item.en.length ? `<div class="text-sm text-indigo-200 mb-2"><span class="text-xs font-bold text-indigo-400">🇬🇧 EN:</span> ${escapeHtml(item.en.join(' • '))}</div>` : ''}
+            ${item.hi_def.length ? `<div class="hi-font text-xs text-slate-300 mb-2">${escapeHtml(item.hi_def[0])}</div>` : ''}
+
+            <div class="flex flex-wrap gap-1.5 mt-2">
+              ${item.bn_synonyms.slice(0,3).map(s => `<span class="bn-font text-[11px] px-2 py-0.5 rounded bg-emerald-950/60 border border-emerald-500/20 text-emerald-200">${escapeHtml(s)}</span>`).join('')}
+              ${item.hi_synonyms.slice(0,3).map(s => `<span class="hi-font text-[11px] px-2 py-0.5 rounded bg-amber-950/60 border border-amber-500/20 text-amber-200">${escapeHtml(s)}</span>`).join('')}
+            </div>
+
+            ${item.examples.length ? `<div class="hi-font mt-3 pt-2 border-t border-slate-800/70 text-xs text-slate-400">“${escapeHtml(item.examples[0])}”</div>` : ''}
+          </div>
+          <div class="mt-3 pt-2 border-t border-slate-800/50 flex items-center justify-between text-[10px] text-slate-500">
+            <span class="font-mono">${item.id}</span>
+            <button onclick='navigator.clipboard.writeText(JSON.stringify(${JSON.stringify(item).replace(/'/g, "&#39;")}, null, 2))' class="hover:text-white transition">📋 Copy JSON</button>
+          </div>
+        </div>
+      `).join('');
+
+      document.getElementById('loadMoreWrap').classList.toggle('hidden', filteredItems.length <= displayLimit);
+    }
+
+    function showMore() {
+      displayLimit += 40;
+      renderResults();
+    }
+
+    // Map first char (whether Bengali or Devanagari!) directly to the right chunk
+    function mapCharToBanglaCode(ch) {
+      if (!ch) return '';
+      let cp = ch.codePointAt(0);
+      if (cp === 0x0935) cp = 0x09AC;
+      else if (cp >= 0x0905 && cp <= 0x0939) cp += 0x80;
+      return cp.toString(16);
+    }
+
+    let searchTimer;
+    document.getElementById('searchInput').addEventListener('input', (e) => {
+      clearTimeout(searchTimer);
+      searchTimer = setTimeout(async () => {
+        const val = e.target.value.trim();
+        if (!allLoaded && val) {
+          const firstChar = Array.from(val)[0];
+          const code = mapCharToBanglaCode(firstChar);
+          const match = manifest.find(m => m.code === code);
+          if (match) {
+            await selectChunk(match.code);
+            return;
+          }
+        }
+        applyFilters();
+      }, 200);
+    });
+
+    document.getElementById('tierFilter').addEventListener('change', applyFilters);
+
+    function speak(text, lang) {
+      if (!('speechSynthesis' in window)) return;
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = lang;
+      speechSynthesis.speak(u);
+    }
+
+    function escapeHtml(s) {
+      return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+    function escapeAttr(s) {
+      return String(s).replace(/'/g,"\\'");
+    }
+
+    init();
+  </script>
+</body>
+</html>
